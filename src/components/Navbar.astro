@@ -1,0 +1,96 @@
+---
+---
+
+<nav class="sticky top-0 z-50 bg-white shadow-md font-sans">
+  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <!-- Left: Logo -->
+    <a href="/" class="text-primary font-serif font-bold text-2xl rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">
+      Summit Wealth Advisors
+    </a>
+
+    <!-- Center Links (Desktop) -->
+    <div class="hidden md:flex items-center space-x-8">
+      <a href="/about" class="text-slate-700 hover:text-primary transition-colors rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">Our Firm</a>
+      
+      <!-- Life Transitions Dropdown -->
+      <div class="relative" data-dropdown>
+        <button data-dropdown-button class="text-slate-700 hover:text-primary transition-colors flex items-center rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">
+          Life Transitions
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+        <div data-dropdown-menu class="absolute hidden bg-white shadow-lg rounded-md mt-2 py-2 w-48 z-20">
+          <a href="/retirement" class="block px-4 py-2 text-slate-700 hover:bg-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">Retirement</a>
+          <a href="/grief-support" class="block px-4 py-2 text-slate-700 hover:bg-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">Loss of a Loved One</a>
+          <a href="/business-exit" class="block px-4 py-2 text-slate-700 hover:bg-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">Business Exit</a>
+          <a href="/career-changes" class="block px-4 py-2 text-slate-700 hover:bg-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">Career Changes</a>
+        </div>
+      </div>
+
+      <a href="/process" class="text-slate-700 hover:text-primary transition-colors rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">Our Process</a>
+      <a href="/resources" class="text-slate-700 hover:text-primary transition-colors rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">Resources</a>
+    </div>
+
+    <!-- Right Actions (Desktop) -->
+    <div class="hidden md:flex items-center space-x-6">
+      <a href="/login" class="text-slate-700 hover:text-primary transition-colors rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">Client Login</a>
+      <a href="/contact" class="bg-primary text-white px-5 py-2 rounded-md transition-colors hover:bg-secondary hover:text-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary">
+        Schedule Clarity Call
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button (Hamburger) -->
+    <div class="md:hidden">
+      <button id="mobile-menu-button" class="text-slate-700 hover:text-primary rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu (Hidden by default) -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
+    <a href="/about" class="block px-4 py-2 text-slate-700 hover:bg-neutral">Our Firm</a>
+    <a href="/transitions" class="block px-4 py-2 text-slate-700 hover:bg-neutral">Life Transitions</a>
+    <a href="/process" class="block px-4 py-2 text-slate-700 hover:bg-neutral">Our Process</a>
+    <a href="/resources" class="block px-4 py-2 text-slate-700 hover:bg-neutral">Resources</a>
+    <a href="/login" class="block px-4 py-2 text-slate-700 hover:bg-neutral">Client Login</a>
+    <a href="/contact" class="block w-full text-left bg-primary text-white px-4 py-3 mt-2 transition-colors hover:bg-secondary hover:text-primary">
+      Schedule Clarity Call
+    </a>
+  </div>
+</nav>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Desktop dropdown toggle
+    const dropdowns = document.querySelectorAll('[data-dropdown]');
+    dropdowns.forEach(dropdown => {
+      const button = dropdown.querySelector('[data-dropdown-button]');
+      const menu = dropdown.querySelector('[data-dropdown-menu]');
+      
+      if(button && menu) {
+        button.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+        });
+
+        // Optional: close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!dropdown.contains(e.target)) {
+            menu.classList.add('hidden');
+          }
+        });
+      }
+    });
+  });
+</script>

@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import kurtHeadshot from '../assets/images/kurt.png';
+import joshHeadshot from '../assets/images/josh.png';
+---
+
+<Layout 
+  title="Our Fiduciary Commitment | Summit Wealth Advisors" 
+  description="Meet Kurt and Josh, the father-son team at Summit Wealth Advisors, and learn about our unwavering fiduciary commitment to financial clarity."
+>
+  <!-- Hero Section -->
+  <section class="relative text-white py-20 md:py-28">
+    <div class="absolute inset-0">
+      <Image 
+        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1742&q=80" 
+        alt="A team collaborating in a modern office" 
+        class="w-full h-full object-cover"
+        width={1742}
+        height={980}
+        widths={[720, 1080, 1742]}
+        sizes="100vw"
+      />
+      <div class="absolute inset-0 bg-primary opacity-80"></div>
+    </div>
+    <div class="relative container mx-auto px-4 text-center">
+      <h1 class="text-5xl font-serif font-bold" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.4);">A Foundation of Trust and Clarity</h1>
+    </div>
+  </section>
+
+  <!-- Our Fiduciary Standard -->
+  <section class="py-16 md:py-24 bg-brand-neutral">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-4xl font-serif font-bold text-center text-primary mb-8">Our Fiduciary Standard: Your Interests First, Always.</h2>
+      <div class="prose prose-lg max-w-none text-slate-700 leading-relaxed space-y-6">
+        <p>
+          The term "fiduciary" is a legal and ethical standard of care that defines our relationship with you. It is a commitment we make without compromise. It means we are legally and ethically bound to act in your best interest at all times, even when it is not in our own. For us, it's more than just a legal requirement—it's the foundation of the clarity and simplicity we provide.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet Our Founders -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
+        <!-- Kurt's Profile -->
+        <div class="text-center">
+          <div class="w-48 h-48 rounded-full overflow-hidden mx-auto mb-6 shadow-lg">
+            <Image src={kurtHeadshot} alt="Headshot of Kurt, Founder of Summit Wealth Advisors" class="w-full h-full object-cover" widths={[200, 400]} sizes="200px" />
+          </div>
+          <h3 class="text-3xl font-serif font-semibold text-primary">Kurt: The Guide with Experience.</h3>
+          <p class="text-slate-700 leading-relaxed mt-4 max-w-md mx-auto">
+            Kurt began his financial advisory career in 1989, driven by a passion to help families navigate their financial lives. In 2004, he made the pivotal decision to transition the firm to a fee-based Registered Investment Advisor (RIA) model. This was a defining moment, cementing his unwavering fiduciary commitment to always prioritize client interests above all else.
+          </p>
+        </div>
+        <!-- Josh's Profile -->
+        <div class="text-center">
+          <div class="w-48 h-48 rounded-full overflow-hidden mx-auto mb-6 shadow-lg">
+            <Image src={joshHeadshot} alt="Headshot of Josh, Partner at Summit Wealth Advisors" class="w-full h-full object-cover" widths={[200, 400]} sizes="200px" />
+          </div>
+          <h3 class="text-3xl font-serif font-semibold text-primary">Josh: Engineering Clarity for the Future.</h3>
+          <p class="text-slate-700 leading-relaxed mt-4 max-w-md mx-auto">
+            With a 13-year technical background as a telecommunications engineer, Josh brings a unique perspective to financial planning. He excels at deconstructing complex financial systems and engineering simple, clear solutions for clients. Since joining the firm in 2023, he has been instrumental in modernizing our processes and is currently pursuing his CFP® certification.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Call to Action -->
+  <section class="py-16 md:py-24 bg-secondary/10">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-serif font-bold text-primary mb-4">Our Goal: Helping You Reach Your Financial Summit.</h2>
+      <p class="text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto mb-8">
+        Our goal is to help families reach their financial Summit.
+      </p>
+      <a href="/contact" class="bg-primary text-white px-8 py-4 rounded-md text-lg font-semibold transition-colors hover:bg-secondary hover:text-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary">
+        Sign up for a Free Consultation to get your complimentary Financial Road Map.
+      </a>
+    </div>
+  </section>
+</Layout>

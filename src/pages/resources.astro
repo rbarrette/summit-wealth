@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Client Clarity Center | Summit Wealth Advisors" 
+  description="Explore ebooks, checklists, and tools designed to bring clarity to complex financial topics like stock options, retirement, and estate planning."
+>
+  <!-- Hero Section -->
+  <section class="py-20 md:py-28 bg-primary text-white text-center">
+    <div class="container mx-auto px-4">
+      <h1 class="text-5xl font-serif font-bold mb-4">The Client Clarity Center</h1>
+      <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+        Actionable guides and simple checklists to help you navigate your financial journey with confidence.
+      </p>
+    </div>
+  </section>
+
+  <!-- Grid of Resources -->
+  <section class="py-16 md:py-24 bg-brand-neutral">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Card 1: Ebook -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col group">
+          <div class="p-8 flex-grow">
+            <h3 class="text-3xl font-serif font-semibold text-primary mb-3">Ebook: Simplifying Stock Options</h3>
+            <p class="text-slate-700 leading-relaxed mb-6">A clear guide to understanding ISOs, NSOs, and how to create a tax-efficient strategy for your equity.</p>
+          </div>
+          <div class="bg-slate-50 p-6 border-t border-slate-200">
+            <a href="#" class="font-semibold text-secondary group-hover:text-primary transition-colors">Download Now &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Checklist -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col group">
+          <div class="p-8 flex-grow">
+            <h3 class="text-3xl font-serif font-semibold text-primary mb-3">Checklist: Retirement Clarity</h3>
+            <p class="text-slate-700 leading-relaxed mb-6">A simple, step-by-step checklist to ensure you've covered the most critical items before you retire.</p>
+          </div>
+          <div class="bg-slate-50 p-6 border-t border-slate-200">
+            <a href="#" class="font-semibold text-secondary group-hover:text-primary transition-colors">Get the Checklist &rarr;</a>
+          </div>
+        </div>
+        
+        <!-- Card 3: Tool Link -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col group">
+          <div class="p-8 flex-grow">
+            <h3 class="text-3xl font-serif font-semibold text-primary mb-3">Tool: Social Security Calculator</h3>
+            <p class="text-slate-700 leading-relaxed mb-6">An external tool we trust to help you visualize different claiming strategies for Social Security benefits.</p>
+          </div>
+          <div class="bg-slate-50 p-6 border-t border-slate-200">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="font-semibold text-secondary group-hover:text-primary transition-colors">Open Tool &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>

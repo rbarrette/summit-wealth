@@ -1,0 +1,47 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-slate-900 text-white py-10">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8">
+      <!-- Info Column -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+        <p class="text-slate-300">123 Financial Ave<br>Suite 100<br>Wealth City, WC 12345</p>
+        <p class="text-slate-300 mt-2">Phone: (123) 456-7890</p>
+        <p class="text-slate-300">Email: info@summitwealthadvisors.com</p>
+      </div>
+
+      <!-- Links Column -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Site Map</h3>
+        <ul class="space-y-2">
+          <li><a href="/" class="text-slate-300 hover:text-white transition-colors rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">Home</a></li>
+          <li><a href="/about" class="text-slate-300 hover:text-white transition-colors rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">About</a></li>
+          <li><a href="/services" class="text-slate-300 hover:text-white transition-colors rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">Services</a></li>
+          <li><a href="/contact" class="text-slate-300 hover:text-white transition-colors rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Certifications Column -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Certifications</h3>
+        <p class="text-slate-300">CFP® Professional</p>
+        <p class="text-slate-300">Fiduciary</p>
+      </div>
+    </div>
+
+    <!-- Legal Section -->
+    <div class="border-t border-slate-700 pt-8 mt-8">
+      <p class="text-xs text-slate-400">
+        Securities offered through [Broker Name], Member FINRA/SIPC. Advisory services offered through Summit Wealth Advisors, a Registered Investment Adviser.
+        Investing involves risk, including the potential loss of principal. Past performance does not guarantee future results.
+      </p>
+      <p class="text-xs text-slate-400 mt-2">
+        <a href="https://brokercheck.finra.org/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">FINRA BrokerCheck</a>
+        &copy; {currentYear} Summit Wealth Advisors. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

@@ -3,22 +3,41 @@ dist/
 
 # generated types
 .astro/
+.vite/ # Vite cache for Astro dev
 
 # dependencies
 node_modules/
 
 # logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+*.log
+# npm-debug.log* # Covered by *.log
+# yarn-debug.log* # Covered by *.log
+# yarn-error.log* # Covered by *.log
+# pnpm-debug.log* # Covered by *.log
 
 # environment variables
 .env
 .env.production
+.env.*
+!.env.example # Keep example file
 
 # macOS-specific files
 .DS_Store
 
 # jetbrains setting folder
 .idea/
+
+# test reports
+coverage/
+
+# Windows specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Common editor backup files
+*.swp
+*.swo
+*~
+.#*
+#*#

@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact Us | Eagle Wealth" description="Get in touch with Eagle Wealth for financial planning services.">
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <h1 class="text-5xl font-serif font-bold text-center text-slate-900 mb-12">Contact Us</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Left Column: Contact Details & Map -->
+        <div>
+          <h2 class="text-3xl font-serif font-semibold text-slate-900 mb-6">Our Office</h2>
+          <div class="space-y-4 text-slate-700 text-lg">
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <p><strong>Email:</strong> info@eaglewealth.com</p>
+            <p><strong>Address:</strong> 123 Financial Ave, Suite 100, Wealth City, WC 12345</p>
+          </div>
+
+          <div class="mt-8">
+            <h2 class="text-3xl font-serif font-semibold text-slate-900 mb-6">Find Us</h2>
+            <div class="aspect-w-16 aspect-h-9 rounded-lg shadow-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.256242699929!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQzJzMzLjciTiA3NMKwMDAnMjEuNiJX!5e0!3m2!1sen!2sus!4v1678912345678!5m2!1sen!2sus"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="w-full h-full"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Contact Form -->
+        <div>
+          <h2 class="text-3xl font-serif font-semibold text-slate-900 mb-6">Request a Consultation</h2>
+          <form action="#" method="POST" class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-slate-700">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                autocomplete="name"
+                required
+                class="mt-1 block w-full px-4 py-2 border border-slate-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-slate-700">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                autocomplete="email"
+                required
+                class="mt-1 block w-full px-4 py-2 border border-slate-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+              />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium text-slate-700">Phone</label>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                autocomplete="tel"
+                class="mt-1 block w-full px-4 py-2 border border-slate-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+              />
+            </div>
+            <div>
+              <label for="how-can-we-help" class="block text-sm font-medium text-slate-700">How can we help?</label>
+              <textarea
+                id="how-can-we-help"
+                name="how-can-we-help"
+                rows="4"
+                class="mt-1 block w-full px-4 py-2 border border-slate-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-primary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors"
+            >
+              Request Consultation
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,27 @@
+# Git
+.git
+.gitignore
+
+# Local Environment
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules
+
+# Astro
+dist
+.astro
+
+# IDE
+.vscode
+
+# PNPM
+pnpm-lock.yaml
+
+# Yarn
+.yarn
+
+# macOS
+.DS_Store

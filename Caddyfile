@@ -1,0 +1,15 @@
+{
+    # This global option tells Caddy to use the Cloudflare DNS challenge by default.
+    acme_dns cloudflare {env.CLOUDFLARE_API_TOKEN}
+}
+
+summit.barrette.casa, barrette.casa {
+    # Tell Caddy where your website files are.
+    root * /usr/share/caddy
+    
+    # Serve the files from that directory.
+    file_server
+    
+    # Compresses responses to improve performance.
+    encode zstd gzip
+}

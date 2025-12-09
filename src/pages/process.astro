@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Process from '../components/Process.astro';
+---
+
+<Layout 
+  title="Our Clarity Roadmap | Summit Wealth Advisors" 
+  description="Discover our 4-step financial planning process designed to provide clarity and simplicity for your most complex financial situations."
+>
+  <!-- Hero Section -->
+  <section class="py-20 md:py-28 bg-primary text-white text-center">
+    <div class="container mx-auto px-4">
+      <h1 class="text-5xl font-serif font-bold mb-4">The Clarity Roadmap</h1>
+      <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+        A straightforward, disciplined process for navigating your financial summit. We translate complexity into a clear, actionable plan.
+      </p>
+    </div>
+  </section>
+
+  <!-- The Process Component -->
+  <Process />
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-24 bg-brand-neutral">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-serif font-bold text-primary mb-6">Ready to Begin Your Ascent?</h2>
+      <p class="text-lg text-slate-700 leading-relaxed mb-8 max-w-2xl mx-auto">Let's start the conversation and see how The Clarity Roadmap can bring simplicity to your financial life.</p>
+      <a href="/contact" class="bg-primary text-white px-8 py-3 rounded-md text-lg font-semibold transition-colors hover:bg-secondary hover:text-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary">
+        Schedule Clarity Call
+      </a>
+    </div>
+  </section>
+</Layout>
